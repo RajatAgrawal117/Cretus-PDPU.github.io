@@ -349,7 +349,7 @@ textarea.input {
     transition: 0.3s all;
   }
   .main-nav.open {
-    max-height: 500px;
+    max-height: 300px;
   }
   .main-nav li.active a:after {
     display: none;
