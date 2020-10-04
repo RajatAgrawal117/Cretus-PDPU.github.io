@@ -1,877 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-  <meta charset="utf-8">
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Robotics and automation club of PDPU" />
-  <meta property="og:description" content="Robotics and automation club of PDPU" />
-  <meta name="og:image" content="img/logo_only1.png" />
-  <meta property="og:image:secure_url" content="img/logo_only.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="400" />
-  <meta property="og:image:height" content="300" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<title>Cretus - Club of PDPU</title>
+	<!--
 
-  <title>CRETUS</title>
-  <link rel="shortcut icon" type="image/png" href="img/logo_only1.png" />
-  <link rel="icon" type="image/png" href="img/logo_only1.png" />
-  <link rel="fluid-icon" type="image/png" href="img/logo_only1.png" />
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i"
-    rel="stylesheet">
-  <!-- Bootstrap -->
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    Cretus Website
 
-  <!-- Owl Carousel -->
-  <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-  <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+    -->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Font Awesome Icon -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Custom stlylesheet -->
-  <link type="text/css" rel="stylesheet" href="css/style.css" />
+     <link rel="icon" href="./images/logo/cretus-logo-removebg-1.png">
+     
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/all.min.css"> 
 
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      var token = "6210588976.1677ed0.1ae376b8045e4ea5970c44f3ab996947"; //your access token here. Visit http://instagram.pixelunion.net/ to get your access token
-        num_photos = 9; //limit number of photos
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/cretus-style.css">
 
-      $.ajax({
-          url: 'https://api.instagram.com/v1/users/self/media/recent',
-          dataType: 'jsonp',
-          type: 'GET',
-          data: {access_token: token, count: num_photos},
-          success: function(data){
-              console.log(data);
-              for( x in data.data ){
-                  $('ul11').append('<li><a target="_blank" href="'+data.data[x].link+'"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
-              }
-          },
-          error: function(data){
-              console.log(data);
-          }
-      });
-    });
-  </script>
 </head>
-<style>
-  #InstaFeed{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    display: inline;
-    }
-    #InstaFeed li{
-      float:left;
-      width:320px;
-      height:320;
-      margin:20px;
-    }
-    #InstaFeed li img{
-      max-width:300px;
-      max-height:300px;
-    }
-    h1{
-      text-align: center;
-    }
-  .rotate {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  }
-
-  .logofixer {
-    position: relative;
-    top: 10px;
-    width: 20%;
-  }
-
-</style>
-
 <body>
 
-  <!-- Header -->
-  <header id="header" class="transparent-navbar">
-    <!-- container -->
-    <div class="container">
-      <!-- navbar header -->
-      <div class="navbar-header">
-        <!-- Logo -->
-        <div class="navbar-brand">
-          <a class="logo" href="index.html">
-            <!-- <img class="logo-img logofix" src="" alt="CRETUS"> -->
-            <p class="logo-img logofix">CRETUS</p>
-            <img class="logo-alt-img" src="img/logo_final13.png" alt="logo">
-          </a>
-        </div>
-        <!-- /Logo -->
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
 
-        <!-- Mobile toggle -->
-        <button class="navbar-toggle">
-          <i class="fa fa-bars"></i>
-        </button>
-        <!-- /Mobile toggle -->
-      </div>
-      <!-- /navbar header -->
-
-      <!-- Navigation -->
-      <nav id="nav">
-        <ul class="main-nav nav navbar-nav navbar-right">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#sponsors">Instagram</a></li>
-          <li><a href="#faq">project</a></li>
-          <!-- <li><a href="#prizes">Prizes</a></li> -->
-          <li><a href="committee.html">committee</a></li>
-          <!-- <li><a href="coc.html">Code of conduct</a></li> -->
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- /Navigation -->
-    </div>
-    <!-- /container -->
-  </header>
-  <!-- /Header -->
-
-  <!-- Home -->
-  <div id="home">
-    <!-- background image -->
-    <div class="section-bg"  data-stellar-background-ratio="0.5"></div>
-    <!-- /background image -->
-
-    <!-- home wrapper -->
-    <div class="home-wrapper">
-      <!-- container -->
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <!-- home content -->
-          <div class="col-md-8 col-md-offset-2">
-            <div class="home-content jumbotron" style="background-color: transparent;border-radius: 20px">
-              <h1 style="font-size: 80px;color: white;text-shadow:0 0 8px #0cbd41 ;font-weight:800"><img src="img/logo_only1.png" class="animated rotateIn delay-1s" style=""
-                  width="100px">&nbsp;<span style="color: #000000">C</span><span style="color: rgb(0, 0, 0)">RETUS</span></h1>
-              <h4 class="lead" style="font-size: 25px;color: rgb(20, 75, 13); text-shadow:0 0 5px white">Create Us</h4>
-              <h5 class="lead" style="font-size: 30px;color: white;text-shadow:0 0 8px #0cbd41 ;font-weight:800">
-                <span style="font-size:20px"></span> Robotics and automation club of PDPU</h5>
-            </div>
+               <span class="spinner-rotate"></span>
+               
           </div>
-          <!-- /home content -->
-        </div>
-        <!-- /row -->
-      </div>
-      <!-- /container -->
-    </div>
-    <!-- /home wrapper -->
-  </div>
-  <!-- /Home -->
-
-  <!-- About -->
-  <div id="about" class="section">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- section title -->
-        <div class="section-title">
-          <h3 class="title"><span>About</span> <span style="color: #bd0c0e;">Cretus</span></h3>
-        </div>
-        <!-- /section title -->
-
-	<div class="college" style="text-align:center; margin-top:-20px;">
-
-	<!-- <img  src="img/ashine.png" alt="logo" style="height:100px;width:100px;border-radius:50%;"> -->
-	<img  src="img/pdpu-logo.png" alt="logo" >
-
-	</div><br><br>
-
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <!-- about content -->
-          <div class="about-content">
-            <p>The Robotics Club endeavors to provide a platform for learning about hardware, electronics, 
-              fabrication and programming for robotics and its application
-              
-              </p>
-              <br>
-           
-              <a href="https://www.instagram.com/cretus.pdpu/" target="_blank"><button id="slackBtn"><i class="fa fa-instagram"></i> Instagram</button></a>
-        </div>
-          <!-- /about content -->
-
-          <!-- Numbers -->
-          <div id="numbers">
-            <!-- row -->
-            <div class="row">
-              <!-- number -->
-              <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="number">
-                  <h3><span class="counter" data-from="0" data-to="30" data-speed="1500">0</span></h3>
-                  <p>Workshops</p>
-                </div>
-              </div>
-              <!-- /number -->
-
-              <!-- number -->
-              <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="number">
-                  <h3><span class="counter" data-from="0" data-to="900" data-speed="1500">0</span>+</h3>
-                  <p>Participants</p>
-                </div>
-              </div>
-              <!-- /number -->
-
-              <!-- number -->
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="number">
-                  <h3><span class="counter" data-from="0" data-to="25" data-speed="1500">0</span>+</h3>
-                  <p>Events</p>
-                </div>
-              </div>
-              <!-- /number -->
-
-            </div>
-            <!-- /row -->
-          </div>
-          <!-- /Numbers -->
-        </div>
-      </div>
-      <!-- row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /About -->
-
-  <!-- Galery -->
-  <div id="galery">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- galery owl -->
-        <div id="galery-owl" class="owl-carousel owl-theme">
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_1.jpg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_2.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_3.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_4.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_5.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_6.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_7.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_8.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_9.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_10.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_11.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_12.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_13.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_14.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
-
-          <!-- galery item -->
-          <div class="galery-item">
-            <img src="img/new_15.jpeg" alt="">
-          </div>
-          <!-- /galery item -->
+     </section>
 
 
-        </div>
-        <!-- /galery owl -->
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /Galery -->
-  <br><br><br><br>
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
 
-  <div class="container tracks section">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="section-title">
-          <h3 class="title"><span style="color:#0b0f28">Cretus </span> <span style="color: #bd0c0e;">Tesseract</span></h3>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6">
-        <h3>Game Of Lines</h3>
-        <img src="img/Game_of_line.jpeg" class="img-responsive" alt="">
-        <p>The challenge is to build a bot, which follows the given pattern of 
-          black line on white background.
-      </div>
-      <div class="col-xs-6">
-        <h3>Robo Tetris</h3>
-        <img src="img/Robo_tetris.jpeg" class="img-responsive" alt="">
-        <p style="margin-bottom:5px;">The task is to build a robot with gripping mechanism to pick and 
-          place the Tetris puzzle and complete certain task midway to reach 
-          the Tetris puzzle.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6">
-        <h3>Robo Soccer</h3>
-        <img src="img/Robo_Soccer.jpeg" class="img-responsive" alt="">
-        <p>Design a robot that is capable of playing soccer in a team and 
-          compete against other teams on the arena specially designed for this 
-          purpose. The event tests robot handling, pushing/dragging 
-          mechanisms, teamwork and the various strategies and counterstrategies employed during the game.
-      </div>
-      <div class="col-xs-6">
-        <h3>Labyrinth</h3>
-        <img src="img/Labyrinth.jpeg" class="img-responsive" alt="">
-        <p style="margin-bottom:5px;">Can your robot brave the miseries of a dark labyrinth and save the 
-          princess in distress? The challenge is to build a rescue bot, equipped 
-          with a mobile camera and flashlights navigate the bot through a 
-          perilous maze and bring back the target (princess) in one piece.
-        </p>
-      </div>
-    </div>
-    <br>
-    <div class="row">
-    <div class="col-md-8 col-md-offset-2 text-center">
-          <!-- about content -->
-          <div class="about-content atlastmoment">
-            <p><b>Tesseract</b></p>
-            <p>Tesseract is PDPU's Annual Science and Technical Festival. Every year, students from all walks of the Unversity come together to celebrate aspirations,
-               creativity and innovation in their own unique ways. The three-day festival entails everything, from gaming to making robots, 
-               from lectures and workshops to a glamorous EDM night.
-              </p>
-            </div>
-    </div>
-    </div>
-  </div>
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
 
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand"><img src="./images/logo/cretus-logo.png" alt="logo of cretus"></a>
+               </div>
 
-<br><br>
-
-
-  <!-- Event Schedule -->
-  <div id="schedule" class="section" style="background-color: whitesmoke;">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- section title -->
-        <div class="section-title">
-          <h3 class="title"><span style="color: #bd0c0e;">Schedule</span></h3>
-        </div>
-        <!-- /section title -->
-
-        <div class="col-md-8 col-md-offset-2">
-
-          <div class="events-wrapper">
-            <!-- event -->
-            <div class="event">
-              <div class="event-day">
-                <div>
-                  <span class="day">9</span>
-                  <span class="year">Nov, 2019</span>
-                </div>
-              </div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 11 : 00 AM</p>
-                <h3 class="event-title">Bot Checking (Game of Line)</h3>
-                <p>Team have to register for event Befor Bot Checking </p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 12 : 00 PM</p>
-                <h3 class="event-title">Rules Recall (Game of Line)</h3>
-                <p>committee member will recall all rules of event.
-                </p>
-              </div>
-            </div>
-            <!-- /event -->
-            <!-- event -->
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 12 : 30 PM</p>
-                <h3 class="event-title">Start Competition (Game of Line)</h3>
-                <p>according to fixers competition will start.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 1 : 30 PM</p>
-                <h3 class="event-title">winners declare (Game of Line)</h3>
-                <p>all participant and winners get certificate.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <div class="event">
-              <div class="event-day">
-                <div>
-                  <span class="day">9</span>
-                  <span class="year">Nov, 2019</span>
-                </div>
-              </div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 3 : 00 PM</p>
-                <h3 class="event-title">Bot checking (Robo Tetris)</h3>
-                <p>Team have to register for event Befor Bot Checking </p>
-              </div>
-            </div>
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 3 : 30 PM</p>
-                <h3 class="event-title">Rules Recall (Robo Tetris)</h3>
-                <p>committee member will recall all rules of event.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 4 : 00 PM</p>
-                <h3 class="event-title">Start Competition (Robo Tetris)</h3>
-                <p>according to fixers competition will start.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 6 : 00 PM</p>
-                <h3 class="event-title">Winners Declare (Robo Tetris)</h3>
-                <p>all participant and winners get certificate.</p>
-              </div>
-            </div>
-            <!-- /event -->
-            <!-- event -->
-            <div class="event">
-              <div class="event-day">
-                <div>
-                  <span class="day">10</span>
-                  <span class="year">Nov, 2019</span>
-                </div>
-              </div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 9 : 00 AM</p>
-                <h3 class="event-title">Bot Checking (Labyrinth)</h3>
-                <p>Team have to register for event Befor Bot Checking </p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 9 : 30 PM</p>
-                <h3 class="event-title">Rules Recall (Labyrinth)</h3>
-                <p>committee member will recall all rules of event.
-                </p>
-              </div>
-            </div>
-            <!-- /event -->
-            <!-- event -->
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 10 : 00 PM</p>
-                <h3 class="event-title">Start Competition (Labyrinth)</h3>
-                <p>according to fixers competition will start.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 1 : 00 PM</p>
-                <h3 class="event-title">winners declare (Labyrinth)</h3>
-                <p>all participant and winners get certificate.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <div class="event">
-              <div class="event-day">
-                <div>
-                  <span class="day">9</span>
-                  <span class="year">Nov, 2019</span>
-                </div>
-              </div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 2: 00 PM</p>
-                <h3 class="event-title">Bot checking (Robo Socker)</h3>
-                <p>Team have to register for event Befor Bot Checking </p>
-              </div>
-            </div>
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 2 : 30 PM</p>
-                <h3 class="event-title">Rules Recall (Robo Socker)</h3>
-                <p>committee member will recall all rules of event.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 3 : 00 PM</p>
-                <h3 class="event-title">Start Competition (Robo Socker)</h3>
-                <p>according to fixers competition will start.</p>
-              </div>
-            </div>
-            <!-- /event -->
-
-            <!-- event -->
-            <div class="event">
-              <div class="event-hour"></div>
-              <div class="event-content">
-                <p class="event-time"><i class="fa fa-clock-o"></i> 6 : 00 PM</p>
-                <h3 class="event-title">Winners Declare (Robo Socker)</h3>
-                <p>all participant and winners get certificate.</p>
-              </div>
-            </div>
-            <!-- /event -->
-            <div>
-              <div class="download-btn">
-            <a href="assets/RULE BOOK 5.0.pdf" download="Timeline" class="main-btn">Download Rulebook</a>
-          </div>
-            </div>
-          </div>
-          <div class="download-btn">
-            
-            <p><b>visit Tesseract Website</b></p>
-          </div>
-          <div class="download-btn1">
-            <a href="https://www.tesseractpdpu.org/" class="main-btn">www.tesseractpdpu.org</a>
-          </div>
-
-        </div>
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /Event Schedule -->
-
-  <!-- Present - Sponsors -->
-        <div id="sponsors" class="section">
-            <div class="container">
-                  <div class="row">
-                        <div class="section-title">
-                          <h3 class="title"><span>Cretus</span> <span style="color: #bd0c0e;">Instagram</span></h3>
-                          <ul11 id="InstaFeed"></ul11>
-                        </div>
-                  </div>
-            </div>
-        </div>
-
-  <!-- FAQS -->
-
-  <div id="faq" class="section" style="background-color: whitesmoke">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- section title -->
-        <div class="section-title">
-          <h3 class="title"><span></span><span style="color: #bd0c0e;">Projects</span></h3>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
-          <div class="row faqs">
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 " id="accordion">
-              <h2 data-parent="#accordion" data-toggle="collapse" class="box h21 arrow0" href="#num1" style="cursor: pointer">
-                <span><i class="material-icons prefix arrow-img0">play_arrow</i></span>Chess playing Robotic Arm
-              </h2>
-              <p class="collapse box1" id="num1">
-                It can play chess. It is completely open source and the methods for building are ar cretus-Github page
-              </p>
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /FAQS -->
- 
-
-  <!-- CTA -->
-  <div id="cta" class="section">
-    <!-- background image -->
-    <div class="section-bg" style="background-image:url(img/background03.jpg)" data-stellar-background-ratio="0.5"></div>
-    <!-- /background image -->
-
-    <!-- container -->
-    <div class="container">
-      <!-- container -->
-      <div class="row">
-        <!-- cta content -->
-        <div class="col-md-8 col-md-offset-2">
-          <div class="cta-content text-center">
-            <h2>Our GitHub Page</h2>
-            <p class="lead">Our focus is to develop Open-source project. </p>
-            <p>  Follow our Github page for smart Open-source projects. </p>
-            <br>
-            <p></p>
-            <a href="https://github.com/Cretus-PDPU" target="_blank"><button id="slackBtn"><i class="fa fa-github"></i> Github</button></a>
-
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                         <li><a href="#home" class="smoothScroll"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About us</a></li>
+                         <li><a href="#project" class="smoothScroll">Projects</a></li>
+                         <li><a href="#blog" class="smoothScroll">Blogs</a></li>
+                         <li><a href="./committee.html" class="smoothScroll">Committee</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#contact">Contact us  <i class="fa fa-mobile fa-lg"></i></a></li>
+                    </ul>
+               </div>
 
           </div>
-        </div>
-        <!-- /cta content -->
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /CTA -->
+     </section>
 
-  <!-- Contact -->
-  <div id="contact" class="section">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- section title -->
-        <div class="section-title">
-          <h3 class="title"><span>Contact</span> <span style="color: #bd0c0e;">Info</span></h3>
-        </div>
-        <!-- /section title -->
 
-        <!-- contact -->
-        <div class="col-sm-4">
-          <div class="contact">
-            <h3>Address</h3>
-            <p> Raisan Village, Gandhinagar - 382007 Gujarat (State), INDIA </p>
+     <!-- HOME -->
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <img src="./images/logo/cretus-logo-removebg-1.png" alt="">
+                              <h1>CRETUS</h1>
+                              <h3>Robotics and Automation club of PDPU</h3>
+                              <!-- <form action="" method="get" class="online-form">
+                                   <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                   <button type="submit" class="form-control">Get started</button>
+                              </form> -->
+                         </div>
+                    </div>
+
+               </div>
           </div>
-        </div>
-        <!-- /contact -->
+     </section>
 
-        <!-- contact -->
-        <div class="col-sm-4">
-          <div class="contact">
-            <h3>Email</h3>
-            <a href="mailto:vatsal.pict17@sot.pdpu.ac.in">vatsal.pict17@sot.pdpu.ac.in</a>
+
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-2 col-md-8 col-sm-6">
+                         <div class="section-title">
+                              <h1>What <span style="color: #43b145;">we</span> are ?</h1>
+                         </div>
+                         <div class="about-img img-responsive">
+                              <img src="./images/logo/cretus-1-removebg.png" alt="logo of cretus with name">
+                              <img src="./images/logo/pdpu-logo-removebg.png" alt="logo od pdpu with name">
+                              <p>The Robotics Club endeavors to provide a platform for learning about hardware, electronics, fabrication and programming for robotics and its application</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="about-thumb">
+                              <img src="images/robot_1.jpeg" class="img-responsive" alt="Andrew Orange">
+                              <div class="about-info about-thumb-up">
+                                   <h2>We do Projects</h2>
+                                   <p>Enhancing the reach of Cretus as a club through workshops and forming a wider space known as Cretus community which will actively participate in the club projects.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="about-thumb">
+                              <div class="about-info about-thumb-down">
+                                   <h2>We conduct workshops</h2>
+                                   <p>Developing interest in the engineering students when it comes to robotics.Helping the students in acquiring skills pertaining to robotics through workshops.</p>
+                              </div>
+                              <img src="images/workshop.jpeg" class="img-responsive" alt="Catherine Soft">
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="about-thumb">
+                              <img src="images/competition.jpeg" class="img-responsive" alt="Jack Wilson">
+                              <div class="about-info about-thumb-up">
+                                   <h2>We organize Robotics competition</h2>
+                                   <p>We Organize competition which will provide the skills related to hardware, electronics, programming and fabrication of robots.</p>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
           </div>
-        </div>
-        <!-- /contact -->
+     </section>
 
-        <!-- contact -->
-        <div class="col-sm-4">
-          <div class="contact">
-            <h3>Mobile</h3>
-            <a href="tel:+91 7283846580"><b>+91 70965 25598</b> - Dhruv Thakkar</a><br>
-            <a href="tel:+91 8879373722"><b>+91 84604 22610</b> - Vatsal Parsaniya</a><br>
+
+     <!-- PROJECTS -->
+     <section id="project" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1><span style="color: #43b145;">Our</span> Projects</h1>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <ul class="nav nav-tabs" role="tablist">
+                              <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Chess Playing Robot</a></li>
+
+                              <!-- <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Mini Projects</a></li>
+
+                              <li><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Major Projects</a></li> -->
+                         </ul>
+
+                         <div class="tab-content">
+                              <div class="tab-pane active" id="tab01" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h4>Continued..</h4>
+                                        <h2>About this project</h2>
+                                        <p>It is a robotic arm with a brain of its own which can play chess like any human can do with another robot or human.</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Features</h2>
+                                        <ul>
+                                             <li>
+                                                  <p><strong>A Brain</strong> - Brain is a system for thinking which moves should the robot play and how should the robotic arm execute it.</p>
+                                             </li>
+                                             <li>
+                                                  <p><strong>A robotic arm</strong> - Robotic arm is the mechanical system which just looks like a human arm and will move the chess pieces on board as per the commands given by the brain.</p>
+                                             </li>
+                                             <li>
+                                                  <p><strong>A sensory chess board</strong> - Sensory board is a chess board fitted with sensors for getting information of the location of all pieces on the board.</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+
+
+                              <!-- <div class="tab-pane" id="tab02" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>Advanced LFR (Line following Robot)</h2>
+                                        <ul>
+                                             <li>
+                                                  <h4>About the project</h4>
+                                                  <p>It is a robot that follows a black line over a white background or vice versa.It has a brain (Arduino or Raspberry pi), Sensors (IR sensor) and Actuators (Dc motors).Sensor detects the line, and brain controls the motors based on data of sensor.</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Self balancing Robot</h2>
+                                        <ul>
+                                             <li>
+                                                  <h4>About the project</h4>
+                                                  <p>Self-Balancing Robot is a Two-wheeled Robot that balances automatically vertically using a closed-loop algorithm.This Robot is controllable by a Smartphone device or a Transmitter.Self-Balancing robots use data from the Accelerometer and Gyroscope to correct its orientation and position</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Universal BOT (Object Detection + ARM)</h2>
+                                        <ul>
+                                             <li>
+                                                  <h4>About the project</h4>
+                                                  <p>This robot will be able to avoid obstacles and will have a gripper mechanism to grip objects.It will have a brain (Arduino or Raspberry Pi), Sensors (IR + Ultrasonic + Pi camera) and Actuators (DC Motors).</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div> -->
+
+                              <!-- <div class="tab-pane" id="tab03" role="tabpanel">
+                                   <div class="tab-pane-item">
+                                        <h2>About the project</h2>
+                                        <p>It is a car which is automatically driven in town with the help of artificial intelligence and deep learning.</p>
+                                   </div>
+                                   <div class="tab-pane-item">
+                                        <h2>Features</h2>
+                                        <p>This Project consists of two main components: <strong>the bots</strong>, and the environments that they operate in, i.e. <strong>the towns.</strong></p>
+                                        <ul>
+                                             <li>
+                                                  <h3>Bot</h3>
+                                                  <p>Bots use only computer vision to: drive down lanes, avoid pedestrians, and navigate intersections. To follow the lanes, they look at the road and detect the road markings. To navigate they read signage including road signs and traffic lights, and communicate with other robots to coordinate.</p>
+                                             </li>
+                                             <li>
+                                                  <h3>Town</h3>
+                                                  <p>The “towns” are highly structured environments built for Bots to operate.The environment has been high formally specified and engineered so that we can guarantee successful operation of the Bots.This also enables a sliding scale of difficulty in both perception and control, since the assumptions about the structure of the environment can	either be used or discarded. For example, each road sign is affixed with an “April Tag” fiducial marker that can be used (ornot) to get the ground truth identity of the sign.</p>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div> -->
+                         </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="project-image">
+                              <img src="images/wall-e-rm-bg.png" class="img-responsive" alt="wall-e">                             
+                         </div>
+                    </div>
+
+               </div>
+
           </div>
-        </div>
-        <!-- /contact -->
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
+     </section>
 
-    <!-- Map -->
-
-    <!-- <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.709508025854!2d72.78295711410247!3d21.163955788526962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dec37cb53cd%3A0x5955242c1e446820!2sNew+CRC!5e0!3m2!1sen!2sin!4v1541182858316"
-        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div> -->
-    <!-- /Map -->
-  </div>
-  <!-- /Contact -->
-
-  <!-- Footer -->
-  <footer id="footer">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-
-        <!-- footer logo -->
-        <div class="col-md-4">
-          <div class="footer-brand">
-            <a class="logo" href="index.html">
-              <img class="logo-img" src="img/logo_final13.png" alt="logo">
-            </a>
+     <!-- Github -->
+     <section id="github-section" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-offset-2 col-md-8 col-sm-6">
+                         <div class="github-header">
+                              <h1>Github <span style="color: #6aee6c;">Page</span></h1>
+                         </div>
+                         <div class="github-img img-responsive">
+                              <a href="https://github.com/Cretus-PDPU/" target="_blank"><img src="./images/logo/Octocat-removebg.png" alt="logo ofGithub"></a>
+                              <a class="github-btn dont" href="https://github.com/Cretus-PDPU/" target="_blank">Github</a>
+                              <p><strong>Our</strong> focus is to develop Open-source project. <br> Follow us on github for more open source projects</p>
+                         </div>
+                    </div>
+               </div>
           </div>
-        </div>
-        <!-- /footer logo -->
+     </section>
 
-        <!-- contact social -->
-        <div class="col-md-8">
-          <div class="contact-social">
-            <a href="https://www.facebook.com/cretus.pdpu" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://github.com/orgs/Cretus-PDPU/" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.instagram.com/cretus.pdpu/" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/cretus/about/" target="_blank"><i class="fa fa-linkedin"></i></a>
+     <!-- Blogs -->
+     <section id="blog" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-2 col-md-8 col-sm-6">
+                         <div class="blog-header">
+                              <h1>Blogs</h1>
+                         </div>
+                         <div class="blog-info">
+                              <div class="owl-carousel owl-theme">
+                                   <div class="item">
+                                        <div class="blog-item">
+                                             <h4>Title</h4>
+                                             <a href="#"><img src="images/blogger.jpg" class="img-responsive" alt="img"></a>
+                                        </div>
+                                        <h3>Blogs will be added soon...</h3>
+                                   </div>
+
+                                   <div class="item">
+                                        <div class="blog-item">
+                                             <h4>Title</h4>
+                                             <a href="#"><img src="images/blogger.jpg" class="img-responsive" alt="img"></a>
+                                        </div>
+                                        <h3>Blogs will be added soon...</h3>
+                                   </div>
+
+                                   <div class="item">
+                                        <div class="blog-item">
+                                             <h4>Title</h4>
+                                             <a href="#"><img src="images/blogger.jpg" class="img-responsive" alt="img"></a>
+                                        </div>
+                                        <h3>Blogs will be added soon...</h3>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
           </div>
-        </div>
-        <!-- /contact social -->
-
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </footer>
-  <!-- /Footer -->
-
-  <!-- jQuery Plugins -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/jquery.countTo.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    for (let i = 0; i < 12; i++) {
-      $('.arrow' + i).on("click", function (event) {
-        $('.arrow-img' + i).toggleClass('rotate');
-      });
-    }
-
-    jQuery(document).ready(function ($) {
-      let alterClass = function () {
-        let ww = document.body.clientWidth;
-        if (ww < 415) {
-          $('.logofix').addClass('logofixer');
-        } else if (ww >= 416) {
-          $('.logofix').removeClass('logofixer');
-        };
-      };
-      $(window).resize(function () {
-        alterClass();
-      });
-      alterClass();
-    });
+     </section>
 
 
+     <!-- Membership -->
+     <!-- <section id="membership" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
 
-    document.addEventListener('DOMContentLoaded', function () {
-      let devfolioOptions1 = {
-        buttonSelector: '#devfolio-apply-now1',
-        key: 'dotslash',
-      }
-      new Devfolio(devfolioOptions1);
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h1>Membership</h1>
+                         </div>
+                    </div>
 
-      let devfolioOptions2 = {
-        buttonSelector: '#devfolio-apply-now2',
-        key: 'dotslash',
-      }
-      new Devfolio(devfolioOptions2);
-    });
+                    <div class="col-md-4 col-sm-6">
+                         <div class="membership-thumb">
+                             <div class="membership-title">
+                                  <h2>Student</h2>
+                             </div>
+                             <div class="membership-info">
+                                   <p>Hardware access</p>
+                                   <p>Technical support</p>
+                                   <p>50% off on workshop</p>
+                                   <p>Networking opportunities</p>
+                                   <p>Latest updates of the ongoing projects</p>
+                             </div>
+                             <div class="membership-bottom">
+                                   <span class="membership-dollar">Rs. 300/year</span>
+                                   <a href="#" class="section-btn membership-btn">Take Now</a>
+                             </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section> -->
 
-  </script>
+
+     <!-- CONTACT -->
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                         <div id="contact-div">
+                              <div class="section-title">
+                                   <h1>Contact <span style="color: #43b145;">Us</span></h1>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <h2>Address</h2>
+                                   <p><a href="https://goo.gl/maps/H6KGDYe14Xy8ZkGd8" target="_blank">Raisan Village, Gandhinagar - 382007 Gujarat (State), INDIA</a></p>
+                              </div>
+                              <div class="col-md-4 col-sm-4 email-id">
+                                   <h2>Email</h2>
+                                   <p><a href="mailto:cretus@pdpu.ac.in">cretus@pdpu.ac.in</a></p>
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <h2>Mobile</h2>
+                                   <p><a href="tel:+91 8155822365"><strong>+91 8155822365 - </strong>Jay Bhagiya</a></p>
+                                   <p><a href="tel:+91 7984661377"><strong>+91 7984661377 - </strong>Jeel Chatrola</a></p>
+                              </div>
+     
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>       
+
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6">
+                              <ul class="social-icon">
+                                   <li><a href="https://github.com/Cretus-PDPU" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+                                   <li><a href="https://www.linkedin.com/company/cretus/about/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                                   <li><a href="https://www.facebook.com/cretus.pdpu" target="_blank"><i class="fab fa-facebook-square fa-2x" attr="facebook icon"></i></a></li>
+                                   <li><a href="https://www.instagram.com/cretus.pdpu/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                                   <li><a href="https://discord.gg/8qHUPE5" target="_blank"><i class="fab fa-discord fa-2x"></i></a></li>
+                              </ul>
+                         </div>
+
+                         <div class="col-md-6 col-sm-6">
+                              <p>Copyright &copy; 2020 Club Name: Cretus</p>
+                         </div>
+
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <!-- <script src='js/font-awesome.js'></script> -->
+
 </body>
-
 </html>
