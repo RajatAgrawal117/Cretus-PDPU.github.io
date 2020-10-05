@@ -276,11 +276,11 @@ Cretus Website
   }
 
   .custom-navbar .navbar-toggle .icon-bar {
-    background: #43b145;
+    background: black;
     border-color: transparent;
   }
 
-  @media(min-width:768px) {
+  @media (min-width:767px) {
     .custom-navbar {
       border-bottom: 0;
       background: 0 0; 
@@ -827,7 +827,7 @@ Cretus Website
     }
 
     .custom-navbar .navbar-nav {
-      margin-left: 0;
+      margin-left: 4em;
     }
 
     .custom-navbar .nav li a {
@@ -855,7 +855,7 @@ Cretus Website
   }
 
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 767px) {
 
     .section-title {
       padding-bottom: 20px;
@@ -887,7 +887,7 @@ Cretus Website
 
     .custom-navbar .nav li a,
     .top-nav-collapse .nav li a {
-      color: #656565;
+      color: black;
     }
 
     .project-image {
@@ -926,22 +926,6 @@ Cretus Website
 
 
   @media screen and (max-width: 480px) {
-
-    /* .online-form input[type="email"],
-    .online-form .form-control {
-      width: 85%;
-    }
-
-    .online-form .form-control {
-      display: block;
-      margin: 20px auto;
-    }
-
-    .online-form button {
-      position: relative;
-      right: 0;
-    } */
-
     .blog-image,
     .blog-info {
       height: 80vh;
